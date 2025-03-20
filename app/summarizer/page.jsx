@@ -7,10 +7,10 @@ import { motion } from "framer-motion";
 import { Loader, Mic, PlayCircle, Clipboard, Home, ChevronDown, Share, Download, LogOut } from "lucide-react";
 import jsPDF from "jspdf";
 import { BiSolidDownArrow, BiSolidUpArrow } from "react-icons/bi";
-import { SignOutButton, auth } from "@clerk/nextjs";
+import { SignOutButton, useAuth } from "@clerk/nextjs";
 
 export default function SummarizationUI() {
-  const { userId } = auth();
+  const { userId } = useAuth();
 
   const [videoTitle, setVideoTitle] = useState("");
   const [loading, setLoading] = useState(false);
