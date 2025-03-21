@@ -98,7 +98,7 @@ export default function SummarizationUI() {
     }, 200);
 
     try {
-        const response = await fetch("https://gamma-youtube-rear.onrender.com/api/summarize", {
+        const response = await fetch("https://gamma-youtube-summarizer-734911192367.us-west1.run.app/api/summarize", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ 
