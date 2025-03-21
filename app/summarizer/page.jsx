@@ -1,10 +1,12 @@
 "use client";
 
+
+
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { motion } from "framer-motion";
-import { Loader, Mic, PlayCircle, Clipboard, Home, ChevronDown, Share, Download, LogOut } from "lucide-react";
+import { Loader, Mic, PlayCircle, Clipboard, Home, ChevronDown, Share, Download, LogOut, Volume2 } from "lucide-react";
 import jsPDF from "jspdf";
 import { BiSolidDownArrow, BiSolidUpArrow } from "react-icons/bi";
 import { SignOutButton, useAuth } from "@clerk/nextjs";
@@ -288,7 +290,7 @@ export default function SummarizationUI() {
         >
           <h2 className="text-2xl font-semibold mb-3">{summary.title}</h2>
           <Button className="mt-4" variant="outline" onClick={() => handleTextToSpeech(summary.text)}>
-            <Mic className="mr-2" /> {isPlaying ? 'Stop' : 'Listen to Summary'}
+            <Volume2 className="mr-2" /> {isPlaying ? 'Stop' : 'Listen to Summary'}
             </Button>
 
           <p className="text-gray-600 dark:text-gray-300">{summary.text}</p>
@@ -356,7 +358,7 @@ export default function SummarizationUI() {
                 variant="outline" 
                 onClick={() => handleTextToSpeech(item.text)}
                   >
-          <Mic className="mr-2" /> {isPlaying ? 'Stop' : 'Listen to Summary'}
+          <Volume2 className="mr-2" /> {isPlaying ? 'Stop' : 'Listen to Summary'}
         </Button>
         <p>{item.text}</p>
 
