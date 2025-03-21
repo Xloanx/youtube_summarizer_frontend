@@ -42,7 +42,7 @@ export default function LandingPage() {
 
       {/* Features Section */}
       <section className="py-16 px-5 text-center bg-gray-100 dark:bg-gray-800">
-        <h2 className="text-3xl font-bold mb-8">Why Use GammaTube?</h2>
+        <h2 className="text-3xl font-bold mb-8">Why Use γTube?</h2>
         <div className="grid md:grid-cols-3 gap-8">
           {[
             { title: "Accurate Summaries", desc: "AI extracts key points and themes instantly.", icon: CheckCircle },
@@ -65,7 +65,7 @@ export default function LandingPage() {
 
       {/* How It Works Section */}
       <section className="py-16 px-5 text-center">
-        <h2 className="text-3xl font-bold mb-8">How GammaTube Works</h2>
+        <h2 className="text-3xl font-bold mb-8">How γTube Works</h2>
         <div className="grid md:grid-cols-3 gap-8">
           {["Log in","Enter Video Title or URL", "AI Analyzes & Summarizes", "Read or Listen to the Summary"].map((step, index) => (
             <motion.div
@@ -83,7 +83,7 @@ export default function LandingPage() {
 
       {/* Footer */}
       <footer className="py-8 text-center bg-gray-200 dark:bg-gray-800">
-        <p className="text-gray-600 dark:text-gray-400">&copy; {new Date().getFullYear()} GammaTube AI Video Summarizer. All rights reserved.</p>
+        <p className="text-gray-600 dark:text-gray-400">&copy; {new Date().getFullYear()} γTube AI Video Summarizer. All rights reserved.</p>
       </footer>
     </div>
   );

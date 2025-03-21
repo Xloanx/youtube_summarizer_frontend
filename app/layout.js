@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "GammaTube",
+  title: "γTube",
   description: "Created by Gamma Team of DivVerse Lab",
 };
 
