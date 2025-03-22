@@ -23,21 +23,23 @@ export default function LandingPage() {
         <p className="text-lg md:text-xl max-w-2xl text-gray-600 dark:text-gray-300 mb-6">
           Get concise, accurate summaries of YouTube videos without watching them. Save time and stay informed.
         </p>
-        <SignedOut>
-          <SignUpButton mode="modal" forceRedirectUrl="/summarizer">
+        {/* <SignedOut>
+          <SignUpButton mode="modal" forceRedirectUrl="/summarizer"> */}
+          <Link href="/summarizer">
             <Button className="px-6 py-3 text-lg" size="lg">
               Get Started
             </Button>
-          </SignUpButton >
-        </SignedOut>
+          </Link>
+          {/* </SignUpButton >
+        </SignedOut> */}
 
-        <SignedIn>
+        {/* <SignedIn>
             <Button className="bg-blue-500 hover:bg-blue-700 px-6 py-3 text-lg rounded-full shadow-lg mr-4"
                 onClick={() => router.push("/summarizer")}
                 >
                 Back To Summarizer
             </Button>
-        </SignedIn>
+        </SignedIn> */}
       </section>
 
       {/* Features Section */}
@@ -67,7 +69,7 @@ export default function LandingPage() {
       <section className="py-16 px-5 text-center">
         <h2 className="text-3xl font-bold mb-8">How γTube Works</h2>
         <div className="grid md:grid-cols-3 gap-8">
-          {["Log in","Enter Video Title or URL", "AI Analyzes & Summarizes", "Read or Listen to the Summary"].map((step, index) => (
+          {["Enter Video Title or URL", "AI Analyzes & Summarizes", "Read or Listen to the Summary"].map((step, index) => (
             <motion.div
               key={index}
               className="p-6 bg-white dark:bg-gray-700 rounded-lg shadow-md"
