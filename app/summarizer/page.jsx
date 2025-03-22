@@ -9,10 +9,8 @@ import { motion } from "framer-motion";
 import { Loader, Mic, PlayCircle, Clipboard, Home, ChevronDown, Share, Download, LogOut, Volume2 } from "lucide-react";
 import jsPDF from "jspdf";
 import { BiSolidDownArrow, BiSolidUpArrow } from "react-icons/bi";
-import { SignOutButton, useAuth } from "@clerk/nextjs";
 
 export default function SummarizationUI() {
-  // const { userId } = useAuth();
 
   const [videoTitle, setVideoTitle] = useState("");
   const [loading, setLoading] = useState(false);
@@ -218,11 +216,7 @@ export default function SummarizationUI() {
       alert("Summary copied to clipboard (sharing not supported).");
     }
   };
-  
 
-  // if (!userId) {
-  //   return <p>Unauthorized</p>;
-  // }
 
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100 flex flex-col items-center py-20 px-5">
@@ -232,14 +226,6 @@ export default function SummarizationUI() {
           <Home className="mr-2" /> 
         </Button>
 
-
-        {/* <SignOutButton>
-          <Button variant="outline" 
-                  // onClick={() => (window.location.href = "/")}
-                  >
-              <LogOut className="mr-2" /> 
-            </Button>
-        </SignOutButton> */}
       </div>
 
 

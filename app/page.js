@@ -1,14 +1,12 @@
 'use client'
 
-import { useRouter } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import { CheckCircle, PlayCircle } from "lucide-react";
 import Link from "next/link";
-import { SignedOut, SignedIn, SignUpButton } from "@clerk/nextjs";
 
 export default function LandingPage() {
-  const router = useRouter();
+
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100">
       {/* Hero Section */}
@@ -23,23 +21,13 @@ export default function LandingPage() {
         <p className="text-lg md:text-xl max-w-2xl text-gray-600 dark:text-gray-300 mb-6">
           Get concise, accurate summaries of YouTube videos without watching them. Save time and stay informed.
         </p>
-        {/* <SignedOut>
-          <SignUpButton mode="modal" forceRedirectUrl="/summarizer"> */}
+
           <Link href="/summarizer">
             <Button className="px-6 py-3 text-lg" size="lg">
               Get Started
             </Button>
           </Link>
-          {/* </SignUpButton >
-        </SignedOut> */}
 
-        {/* <SignedIn>
-            <Button className="bg-blue-500 hover:bg-blue-700 px-6 py-3 text-lg rounded-full shadow-lg mr-4"
-                onClick={() => router.push("/summarizer")}
-                >
-                Back To Summarizer
-            </Button>
-        </SignedIn> */}
       </section>
 
       {/* Features Section */}
