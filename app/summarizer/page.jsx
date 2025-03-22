@@ -114,7 +114,7 @@ export default function SummarizationUI() {
         const data = await response.json(); 
         console.log(data)
         const newSummary = {
-          title: videoTitle,
+          title: data.title,
           text: data.summary || "No summary available",
           sentiment: data.sentiment || "Neutral",
           keyMentions: data.key_mentions && Array.isArray(data.key_mentions)
